@@ -1,0 +1,25 @@
+# Bytecode caches
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.env.*
+
+# VSCode settings (keep if you want to share)
+.vscode/
+
+# Logs and dumps
+*.log
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local tooling
+.settings/
