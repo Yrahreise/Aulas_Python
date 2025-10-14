@@ -22,3 +22,6 @@ python aula8.py
 
 ## Autor
 Hary Fernando Herdt
+
+.python-version
+.idea/
