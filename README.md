@@ -45,3 +45,23 @@ python aula8.py
 ## Autor
 Hary Fernando Herdt
 
+## Auto-sync com Git (opcional)
+Você pode sincronizar automaticamente as aulas com o GitHub assim que terminar de editar:
+
+- O arquivo `auto_sync.py` observa mudanças em `aula*.py`.
+- Quando ficar sem alterações por alguns segundos, ele faz `git add` + `commit` e tenta `git push`.
+- Se estiver offline, o commit é feito localmente; quando a conexão voltar, ele tenta enviar periodicamente.
+
+Como iniciar pelo VS Code:
+1. Abra o menu “Terminal” > “Run Task…”
+2. Escolha “Auto Sync: Git aulas”. Isso abrirá um terminal rodando em background.
+3. Para parar, feche o terminal desta tarefa ou pressione `Ctrl+C` nele.
+
+Ajustes rápidos (opcionais):
+- No arquivo `.vscode/tasks.json`, você pode alterar variáveis de ambiente:
+	- `QUIET_SECONDS` (padrão 20): tempo de inatividade antes de commitar.
+	- `CHECK_INTERVAL` (padrão 2): frequência de verificação.
+	- `PUSH_POLL_SECONDS` (padrão 60): frequência de tentativas de push pendentes.
+
+Observação: o script só considera arquivos que começam com `aula` e terminam com `.py`.
+
