@@ -59,8 +59,8 @@ Como iniciar pelo VS Code:
 
 Ajustes rápidos (opcionais):
 - No arquivo `.vscode/tasks.json`, você pode alterar variáveis de ambiente:
-	- `QUIET_SECONDS` (padrão 20): tempo de inatividade antes de commitar.
-	- `CHECK_INTERVAL` (padrão 2): frequência de verificação.
+	- `QUIET_SECONDS` (padrão 60): tempo de inatividade antes de commitar.
+	- `CHECK_INTERVAL` (padrão 5): frequência de verificação.
 	- `PUSH_POLL_SECONDS` (padrão 60): frequência de tentativas de push pendentes.
 
 Observação: o script só considera arquivos que começam com `aula` e terminam com `.py`.
