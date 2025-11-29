@@ -1,0 +1,23 @@
+# Copilot Instructions
+- **Escopo**: Este repositório contém scripts de aulas independentes (`aula001.py` … `aula026.py`) e o auxiliar `auto_sync.py`. Não há módulos interligados; cada arquivo roda sozinho para ensinar fundamentos.
+- **Execução**: Rode `python aulaNNN.py` a partir da raiz do projeto (`python aula026.py`). Não assuma ambientes virtuais ou dependências externas; tudo usa apenas a biblioteca padrão do CPython.
+- **Checagem rápida**: Ao testar trechos, execute diretamente o arquivo-alvo para ver as impressões na ordem correta; quase nunca é necessário depurar com breakpoints.
+- **Padrão das aulas**: Cada `aula*.py` aborda um único conceito (comentários, I/O, formatação de strings etc.) usando `print` no nível superior e docstrings curtas. Preserve o tom didático e mantenha exemplos mínimos e incrementais.
+- **Estilo de comentários**: As aulas combinam docstrings com aspas triplas e comentários de linha para explicar em português—repita esse formato ao estender conteúdo.
+- **Nomeação de arquivos**: Novas aulas devem seguir a sequência `aulaXYZ.py` para que o watcher de auto-sync e o índice do README permaneçam corretos.
+- **Numeração**: Mantenha três dígitos com zeros à esquerda para garantir a ordem lexical e a organização previsível da pasta.
+- **Alinhamento com o README**: Qualquer aula nova deve ser adicionada ao `README.md` em "Índice das Aulas" para manter o sumário atualizado.
+- **Auxiliar de auto-sync**: `auto_sync.py` observa arquivos `aula*.py` e faz commit/push após `QUIET_SECONDS` (padrão 20). Se renomear ou mover aulas, ajuste `FILE_PREFIX`/`FILE_SUFFIX`.
+- **Escopo do watcher**: Apenas arquivos que combinam com `aula*.py` são adicionados automaticamente; scripts auxiliares ou notebooks precisam de `git add` manual.
+- **Fluxo de Git**: A tarefa do VS Code "Auto Sync: Git aulas" executa o watcher com as variáveis `QUIET_SECONDS`, `CHECK_INTERVAL`, `PUSH_POLL_SECONDS`. Prefira iniciar/encerrar por "Run Task…" salvo se precisar de parâmetros customizados.
+- **Commits em segundo plano**: Com o auto-sync ativo, confira `git status` antes de sair do VS Code para garantir que rascunhos não foram commitados sem querer.
+- **Formatação**: Os arquivos são ASCII simples. Mantenha literais e comentários enxutos; só introduza construções avançadas de Python quando a aula tratar do tema.
+- **Dependências**: Nenhum pacote externo é usado. Fique na biblioteca padrão e destaque os imports quando apresentá-los.
+- **Consistência**: Ao expandir conteúdo, priorize exemplos diretos com `print` e docstrings curtas. Evite encapsular em funções salvo quando o assunto exigir execução sequencial.
+- **Tratamento de erros**: As lições mostram conceitos sem `try/except` a menos que o tópico seja esse; mantenha a abordagem simples.
+- **Testes**: Não há suíte automatizada. As verificações são manuais rodando o `python aulaNNN.py` correspondente.
+- **Dados de exemplo**: Use literais pequenos (por exemplo `'ABC'`, números baixos) para manter a saída legível no console.
+- **Edições seguras**: Como `auto_sync.py` prepara `aula*.py` automaticamente, revise as alterações antes de deixar o editor ocioso se o watcher estiver ativo.
+- **Foco em Windows**: Caminhos e comandos assumem PowerShell no Windows (ver README). Só traga variantes multiplataforma quando necessário.
+- **Idioma**: Comentários existentes estão em português; mantenha novas explicações na mesma língua salvo instrução contrária.
+- **Mudanças grandes**: Planeje edições que envolvam vários arquivos com cuidado; as aulas devem continuar curtas e independentes. Se compartilhar código, explique o motivo no arquivo e no README.
