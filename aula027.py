@@ -17,3 +17,4 @@ print(len(variavel)) # escreve quantos caracteres tem a str
 print(variavel[0:9]) # escreve Olá mundo
 print(variavel[0:9:2]) # escreve O âmdo (pula de 2 em 2)
 print(variavel[-1:-10:-1]) # escreve odnum álO (str invertida)
+''
