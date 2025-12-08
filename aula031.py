@@ -6,7 +6,7 @@ id = identidade do objeto
 """
 
 v1 = 'a'
-
+print(id(v1))
 # condicao = false
 
 # if condicao:
