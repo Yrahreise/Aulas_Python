@@ -22,6 +22,8 @@ Personalização via variáveis (opcional):
 WATCH_DIR = os.path.abspath(os.path.dirname(__file__))
 FILE_PREFIX = "aula"
 FILE_SUFFIX = ".py"
+# Arquivos extras a observar/commitar além de aula*.py
+WATCH_EXTRA = ["README.md"]
 QUIET_SECONDS = int(os.getenv("QUIET_SECONDS", "20"))
 CHECK_INTERVAL = float(os.getenv("CHECK_INTERVAL", "2"))
 PUSH_POLL_SECONDS = int(os.getenv("PUSH_POLL_SECONDS", "60"))
@@ -62,6 +64,9 @@ def add_changes():
     # ainda assim tentará adicionar tudo para não perder alterações relacionadas.
     # Primeiro tenta por padrão: aula*.py
     code, _ = run(["git", "add", f"{FILE_PREFIX}*{FILE_SUFFIX}"])
+    # Em seguida, adiciona explicitamente os extras (ex.: README.md)
+    for extra in WATCH_EXTRA:
+        run(["git", "add", extra])
     if code != 0:
         # fallback: adiciona tudo
         run(["git", "add", "."])
@@ -107,11 +112,17 @@ def has_unpushed_commits() -> bool:
 
 
 def list_aula_files():
-    return [
+    base = [
         os.path.join(WATCH_DIR, f)
         for f in os.listdir(WATCH_DIR)
         if f.startswith(FILE_PREFIX) and f.endswith(FILE_SUFFIX)
     ]
+    # Inclui arquivos extras observados
+    for extra in WATCH_EXTRA:
+        path = os.path.join(WATCH_DIR, extra)
+        if os.path.isfile(path):
+            base.append(path)
+    return base
 
 
 def current_snapshot():
@@ -148,7 +159,8 @@ def main():
         print("Este diretório não é um repositório Git. Saindo.")
         sys.exit(1)
 
-    log("Auto-sync iniciado. Observando arquivos aula*.py…")
+    extras = ", ".join(WATCH_EXTRA) if WATCH_EXTRA else "(nenhum extra)"
+    log(f"Auto-sync iniciado. Observando arquivos aula*.py e extras: {extras}…")
     prev = current_snapshot()
     last_change = None
 
