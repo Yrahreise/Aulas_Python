@@ -12,11 +12,11 @@ class SimulacaoFuelCell:
         self.F = 96485  # Constante de Faraday [C/mol]
         
         # --- Parâmetros do Usuário/Ambiente ---
-        self.temp_amb_c = 25
+        self.temp_amb_c = 25 #25°C Temperatura Ambiente [°C]
         # Temperatura de Operação do Stack (Crucial para a eficiência)
         self.temp_stack_k = 273.15 + 55  # ~55°C é um valor comum para PEMFC
         self.temp_amb_k = 273.15 + self.temp_amb_c
-        self.umidade_relativa = 0.70  # 70%
+        self.umidade_relativa = 0.70 # 70%
         self.pressao_atm = 101325  # Pressão atmosférica padrão [Pa]
         
         # --- Parâmetros do Tanque ---
