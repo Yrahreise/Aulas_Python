@@ -41,9 +41,9 @@ Repositório contendo scripts progressivos das aulas de Python, cobrindo desde f
 
 ## 🚀 Como Executar
 
-No terminal, dentro da pasta do projeto:
+No PowerShell dentro da pasta do projeto:
 
-```bash
+```pwsh
 python aula001.py
 ```
 
@@ -70,7 +70,7 @@ O arquivo `auto_sync.py` observa mudanças em arquivos `aula*.py` e sincroniza a
 - Se estiver offline, o commit é feito localmente; quando a conexão voltar, ele tenta enviar periodicamente.
 
 Para usar:
-```bash
+```pwsh
 python auto_sync.py
 ```
 
