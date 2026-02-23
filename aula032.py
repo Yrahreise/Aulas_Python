@@ -3,12 +3,10 @@ Faça um programa que peça ao usuário para digitar um número inteiro,
 informe se este número é par ou ímpar. Caso o usuário não digite um número
 inteiro, informe que não é um número inteiro.
 """
+"""
+entrada = input('Digite um número inteiro: ') # Solicita entrada do usuário
 
-"""# Solicita entrada do usuário
-entrada = input('Digite um número inteiro: ')
-
-# Tenta converter a entrada para inteiro
-try:
+try: # Tenta converter a entrada para um número inteiro
     numero = int(entrada)
     
     # Verifica se o número é par ou ímpar
@@ -21,14 +19,17 @@ try:
 except ValueError:
     # Se a conversão falhar, informa que não é um número inteiro
     print('Você não digitou um número inteiro.')
+    """
+
+
+
 """
-
-
-"""Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
+Faça um programa que pergunte a hora ao usuário e, baseando-se no horário 
 descrito, exiba a saudação apropriada. Ex. 
-Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23."""
-
-"""entrada = input('Digite a hora (0-23): ') # Solicita a hora ao usuário
+Bom dia 0-11, Boa tarde 12-17 e Boa noite 18-23.
+"""
+"""
+entrada = input('Digite a hora (0-23): ') # Solicita a hora ao usuário
 
 # Tenta converter para inteiro e validar
 try:
@@ -50,13 +51,15 @@ except ValueError:
     print('Por favor, digite um número inteiro válido.')
 """
 
-
-"""
-Faça um programa que peça o primeiro nome do usuário. Se o nome tiver 4 letras ou 
+"""Faça um programa que peça o primeiro nome do usuário. Se o nome tiver 4 letras ou 
 menos escreva "Seu nome é curto"; se tiver entre 5 e 6 letras, escreva 
 "Seu nome é normal"; maior que 6 escreva "Seu nome é muito grande". 
 """
 
+
+
+
+"""
 # Solicita o primeiro nome do usuário
 nome = input('Digite seu primeiro nome: ')
 
@@ -78,3 +81,4 @@ if tamanho > 0:
         print('Seu nome é muito grande')
 else:
     print('Você não digitou nenhum nome!')
+"""
