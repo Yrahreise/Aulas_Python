@@ -1,25 +1,45 @@
-# Bytecode caches
+# Ambientes virtuais
+venv/
+env/
+ENV/
+.venv
+
+# Cache Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
-# Virtual environments
-venv/
-.env/
-.env.*
+# Distribuição / empacotamento
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# VSCode settings (keep if you want to share)
+# IDEs
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Logs and dumps
-*.log
-
-# OS files
-Thumbs.db
+# Sistema Operacional
 .DS_Store
+Thumbs.db
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Local tooling
-.settings/
+# Logs e databases
+*.log
+*.sql
+*.sqlite

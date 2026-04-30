@@ -1,4 +1,4 @@
-# Aulas Python
+# 🐍 Aulas de Python
 
 Repositório com scripts das aulas de Python. Cada arquivo `aulaX.py` contém exemplos e exercícios do curso, cobrindo fundamentos da linguagem.
 
@@ -44,24 +44,29 @@ Repositório com scripts das aulas de Python. Cada arquivo `aulaX.py` contém ex
 No PowerShell dentro da pasta do projeto:
 
 ```pwsh
-python aula8.py
+python aula001.py
 ```
 
-(Substitua `aula8.py` pelo arquivo desejado.)
+Substitua `aula001.py` pelo arquivo da aula desejada.
 
-## Próximos passos sugeridos
-- Adicionar comentários explicando cada conceito.
-- Criar uma pasta `exercicios/` para separar práticas.
-- Incluir testes simples futuramente.
+## 📁 Estrutura do Repositório
 
-## Autor
-Hary Fernando Herdt
+```
+Aulas_Python/
+├── aula001.py
+├── aula002.py
+├── ...
+├── aula032.py
+├── auto_sync.py
+├── README.md
+└── .gitignore
+```
 
-## Auto-sync com Git (opcional)
-Você pode sincronizar automaticamente as aulas com o GitHub assim que terminar de editar:
+## 🔄 Auto-sync com Git (opcional)
 
-- O arquivo `auto_sync.py` observa mudanças em `aula*.py`.
-- Quando ficar sem alterações por alguns segundos, ele faz `git add` + `commit` e tenta `git push`.
+O arquivo `auto_sync.py` observa mudanças em arquivos `aula*.py` e sincroniza automaticamente com o GitHub:
+
+- Quando ficar sem alterações por alguns segundos, faz `git add` + `commit` e tenta `git push`.
 - Se estiver offline, o commit é feito localmente; quando a conexão voltar, ele tenta enviar periodicamente.
 
 Como iniciar pelo VS Code:
