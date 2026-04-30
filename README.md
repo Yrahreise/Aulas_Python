@@ -3,7 +3,7 @@
 Repositório com scripts das aulas de Python. Cada arquivo `aulaX.py` contém exemplos e exercícios do curso, cobrindo fundamentos da linguagem.
 
 ## Estrutura
-- `aula001.py` ... `aula020.py`: Exemplos progressivos.
+- `aula001.py` ... `aula032.py`: Exemplos progressivos.
 - `.gitignore`: Arquivos e pastas ignorados no controle de versão.
 
 ## Índice das Aulas
@@ -27,6 +27,18 @@ Repositório com scripts das aulas de Python. Cada arquivo `aulaX.py` contém ex
 - [Aula 018](./aula018.py)
 - [Aula 019](./aula019.py)
 - [Aula 020](./aula020.py)
+- [Aula 021](./aula021.py)
+- [Aula 022](./aula022.py)
+- [Aula 023](./aula023.py)
+- [Aula 024](./aula024.py)
+- [Aula 025](./aula025.py)
+- [Aula 026](./aula026.py)
+- [Aula 027](./aula027.py)
+- [Aula 028](./aula028.py)
+- [Aula 029](./aula029.py)
+- [Aula 030](./aula030.py)
+- [Aula 031](./aula031.py)
+- [Aula 032](./aula032.py)
 
 ## Como executar
 No PowerShell dentro da pasta do projeto:
@@ -53,8 +65,8 @@ Você pode sincronizar automaticamente as aulas com o GitHub assim que terminar 
 - Se estiver offline, o commit é feito localmente; quando a conexão voltar, ele tenta enviar periodicamente.
 
 Como iniciar pelo VS Code:
-1. Abra o menu “Terminal” > “Run Task…”
-2. Escolha “Auto Sync: Git aulas”. Isso abrirá um terminal rodando em background.
+1. Abra o menu "Terminal" > "Run Task…"
+2. Escolha "Auto Sync: Git aulas". Isso abrirá um terminal rodando em background.
 3. Para parar, feche o terminal desta tarefa ou pressione `Ctrl+C` nele.
 
 Ajustes rápidos (opcionais):
@@ -64,4 +76,3 @@ Ajustes rápidos (opcionais):
 	- `PUSH_POLL_SECONDS` (padrão 60): frequência de tentativas de push pendentes.
 
 Observação: o script só considera arquivos que começam com `aula` e terminam com `.py`.
-
