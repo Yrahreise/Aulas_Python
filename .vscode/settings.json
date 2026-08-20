@@ -1,0 +1,4 @@
+{
+  "code-runner.clearPreviousOutput": true,
+  "python.terminal.clearBeforeRun": true
+}
